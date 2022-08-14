@@ -36,18 +36,27 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <segue destination="sm5-z2-fYd" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="gf2-2m-WXO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vP4-IT-9NQ">
                                 <rect key="frame" x="35" y="255" width="107" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Forgot UserName?"/>
+                                <connections>
+                                    <action selector="forgotNameButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="utr-Mj-bcr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krj-Uf-Xhe">
                                 <rect key="frame" x="184" y="255" width="101" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Forgot Password?"/>
+                                <connections>
+                                    <action selector="forgotPasswordButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wwh-gD-wvj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -65,40 +74,50 @@
                             <constraint firstItem="vP4-IT-9NQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="slB-aK-nTZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="forgotNameButton" destination="vP4-IT-9NQ" id="hta-lj-U0r"/>
+                        <outlet property="forgotPasswordButton" destination="krj-Uf-Xhe" id="ksq-E0-Uor"/>
+                        <outlet property="logInButton" destination="01E-7Z-awv" id="CW5-WC-2Oa"/>
+                        <outlet property="passwordTF" destination="VCw-ZN-YjV" id="Gwb-FZ-pPw"/>
+                        <outlet property="userNameTF" destination="EcH-qV-ZF0" id="QgJ-2T-g3q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="82"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="F5y-9z-vCb">
             <objects>
-                <viewController id="sm5-z2-fYd" sceneMemberID="viewController">
+                <viewController id="sm5-z2-fYd" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zpk-eC-qyy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arg-LA-5Un">
-                                <rect key="frame" x="59" y="100" width="202" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="88" y="100" width="144.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryE-mh-gJk">
-                                <rect key="frame" x="135" y="156" width="50" height="50"/>
+                                <rect key="frame" x="135" y="174" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="RYQ-Cb-ncK"/>
                                     <constraint firstAttribute="height" constant="50" id="SN8-Ir-TBq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBM-OH-wzq">
-                                <rect key="frame" x="115.5" y="388" width="89" height="42"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <rect key="frame" x="124" y="394" width="72" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <segue destination="BPx-zf-f2d" kind="unwind" unwindAction="undiwndSegue:" id="R7D-qI-Vqw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Oc-md-hfh"/>
@@ -109,11 +128,16 @@
                             <constraint firstItem="arg-LA-5Un" firstAttribute="centerX" secondItem="Zpk-eC-qyy" secondAttribute="centerX" id="aMu-Bb-xAm"/>
                             <constraint firstItem="KBM-OH-wzq" firstAttribute="centerX" secondItem="Zpk-eC-qyy" secondAttribute="centerX" id="gA2-73-II3"/>
                             <constraint firstItem="2Oc-md-hfh" firstAttribute="bottom" secondItem="KBM-OH-wzq" secondAttribute="bottom" constant="50" id="nYy-mx-JAt"/>
-                            <constraint firstItem="ryE-mh-gJk" firstAttribute="top" secondItem="arg-LA-5Un" secondAttribute="bottom" constant="20" id="yCT-xH-92K"/>
+                            <constraint firstItem="ryE-mh-gJk" firstAttribute="top" secondItem="arg-LA-5Un" secondAttribute="bottom" constant="50" id="yCT-xH-92K"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="BVq-Ry-ftK"/>
+                    <connections>
+                        <outlet property="welcomeMessage" destination="arg-LA-5Un" id="aTm-U3-1Wp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4iq-97-Y2r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="BPx-zf-f2d" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="729.375" y="80"/>
         </scene>
