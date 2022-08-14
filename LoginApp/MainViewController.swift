@@ -36,6 +36,10 @@ class MainViewController: UIViewController {
         welcomeVC.userName = userNameTF.text
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+    }
+    
     //MARK: - IBAction
     @IBAction func forgotNameButtonPressed() {
         showAlert(with: "Oops!", and: "Your name is User 😉")
