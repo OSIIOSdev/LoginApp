@@ -31,9 +31,9 @@ class MainViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? GreetingViewController else { return }
+        guard let greetingVC = segue.destination as? GreetingViewController else { return }
         
-        welcomeVC.userName = userNameTF.text
+        greetingVC.userName = userNameTF.text
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -49,6 +49,12 @@ class MainViewController: UIViewController {
         showAlert(with: "Oops!", and: "Your password is Password 😉")
     }
     
+    //MARK: - undiwndSegue
+    @IBAction func undiwndSegue(_ segue: UIStoryboardSegue) {
+        userNameTF.text = ""
+        passwordTF.text = ""
+    }
+    
     //MARK: - UIAlertController
     private func showAlert(with title: String, and message: String) {
         let alertMessage = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -59,12 +65,5 @@ class MainViewController: UIViewController {
         
         present(alertMessage, animated: true)
     }
-    
-    //MARK: - undiwndSegue
-    @IBAction func undiwndSegue(_ segue: UIStoryboardSegue) {
-        userNameTF.text = ""
-        passwordTF.text = ""
-    }
-
 }
 
