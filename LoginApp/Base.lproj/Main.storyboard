@@ -27,7 +27,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VCw-ZN-YjV">
                                         <rect key="frame" x="0.0" y="50" width="250" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="20" y="82"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Greeting View Controller-->
         <scene sceneID="F5y-9z-vCb">
             <objects>
-                <viewController id="sm5-z2-fYd" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sm5-z2-fYd" customClass="GreetingViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zpk-eC-qyy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -133,7 +133,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="BVq-Ry-ftK"/>
                     <connections>
-                        <outlet property="welcomeMessage" destination="arg-LA-5Un" id="aTm-U3-1Wp"/>
+                        <outlet property="greetingMessage" destination="arg-LA-5Un" id="pP5-7u-5XU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4iq-97-Y2r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

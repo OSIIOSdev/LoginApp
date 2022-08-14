@@ -7,6 +7,7 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    //MARK: - IBOutlets
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
@@ -15,14 +16,27 @@ class MainViewController: UIViewController {
     @IBOutlet var forgotNameButton: UIButton!
     @IBOutlet var forgotPasswordButton: UIButton!
     
-    var userName: String!
-    
+    //MARK: - ovveride functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        userNameTF.text = userName
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if userNameTF.text == "User" && passwordTF.text == "Password" {
+            return true
+        } else {
+            showAlert(with: "Wrong data", and: "Please enter the correct data")
+            return false
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? GreetingViewController else { return }
+        
+        welcomeVC.userName = userNameTF.text
+    }
+    
+    //MARK: - IBAction
     @IBAction func forgotNameButtonPressed() {
         showAlert(with: "Oops!", and: "Your name is User 😉")
     }
@@ -44,7 +58,8 @@ class MainViewController: UIViewController {
     
     //MARK: - undiwndSegue
     @IBAction func undiwndSegue(_ segue: UIStoryboardSegue) {
-       
+        userNameTF.text = ""
+        passwordTF.text = ""
     }
 
 }
