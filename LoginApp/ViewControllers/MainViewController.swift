@@ -11,21 +11,17 @@ class MainViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    @IBOutlet var logInButton: UIButton!
+    private let userName = "User"
+    private let password = "Password"
     
-    @IBOutlet var forgotNameButton: UIButton!
-    @IBOutlet var forgotPasswordButton: UIButton!
     
-    //MARK: - ovveride functions
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+    //MARK: - override methods
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if userNameTF.text == "User" && passwordTF.text == "Password" {
+        if userNameTF.text == userName && passwordTF.text == password {
             return true
         } else {
-            showAlert(with: "Wrong data", and: "Please enter the correct data")
+            showAlert(with: "Invalid login or password", and: "Please enter correct login and password")
+            clearTF()
             return false
         }
     }
@@ -33,26 +29,26 @@ class MainViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let greetingVC = segue.destination as? GreetingViewController else { return }
         
-        greetingVC.userName = userNameTF.text
+        greetingVC.userName = userName
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     //MARK: - IBAction
     @IBAction func forgotNameButtonPressed() {
-        showAlert(with: "Oops!", and: "Your name is User 😉")
+        showAlert(with: "Oops!", and: "Your name is \(userName) 😉")
     }
     
     @IBAction func forgotPasswordButtonPressed() {
-        showAlert(with: "Oops!", and: "Your password is Password 😉")
+        showAlert(with: "Oops!", and: "Your password is \(password) 😉")
     }
     
     //MARK: - undiwndSegue
     @IBAction func undiwndSegue(_ segue: UIStoryboardSegue) {
-        userNameTF.text = ""
-        passwordTF.text = ""
+        clearTF()
     }
     
     //MARK: - UIAlertController
@@ -64,6 +60,13 @@ class MainViewController: UIViewController {
         alertMessage.addAction(okAction)
         
         present(alertMessage, animated: true)
+    }
+    
+    //MARK: - private methods
+    
+    private func clearTF() {
+        userNameTF.text = ""
+        passwordTF.text = ""
     }
 }
 
