@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class MainViewController: UIViewController {
+class LoginViewController: UIViewController {
     //MARK: - IBOutlets
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
@@ -46,7 +46,6 @@ class MainViewController: UIViewController {
         showAlert(with: "Oops!", and: "Your password is \(password) 😉")
     }
     
-    //MARK: - undiwndSegue
     @IBAction func undiwndSegue(_ segue: UIStoryboardSegue) {
         clearTF()
     }
@@ -63,7 +62,6 @@ class MainViewController: UIViewController {
     }
     
     //MARK: - private methods
-    
     private func clearTF() {
         userNameTF.text = ""
         passwordTF.text = ""

@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		69E9FF7A28A8E90A00CB5572 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E9FF7928A8E90A00CB5572 /* AppDelegate.swift */; };
 		69E9FF7C28A8E90A00CB5572 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E9FF7B28A8E90A00CB5572 /* SceneDelegate.swift */; };
-		69E9FF7E28A8E90A00CB5572 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E9FF7D28A8E90A00CB5572 /* MainViewController.swift */; };
+		69E9FF7E28A8E90A00CB5572 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E9FF7D28A8E90A00CB5572 /* LoginViewController.swift */; };
 		69E9FF8128A8E90A00CB5572 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E9FF7F28A8E90A00CB5572 /* Main.storyboard */; };
 		69E9FF8328A8E90D00CB5572 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69E9FF8228A8E90D00CB5572 /* Assets.xcassets */; };
 		69E9FF8628A8E90D00CB5572 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E9FF8428A8E90D00CB5572 /* LaunchScreen.storyboard */; };
 		69E9FF8E28A9066B00CB5572 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E9FF8D28A9066B00CB5572 /* GreetingViewController.swift */; };
+		69E9FF9A28AD88AB00CB5572 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E9FF9928AD88AB00CB5572 /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		69E9FF7628A8E90A00CB5572 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E9FF7928A8E90A00CB5572 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69E9FF7B28A8E90A00CB5572 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		69E9FF7D28A8E90A00CB5572 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		69E9FF7D28A8E90A00CB5572 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		69E9FF8028A8E90A00CB5572 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69E9FF8228A8E90D00CB5572 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69E9FF8528A8E90D00CB5572 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69E9FF8728A8E90D00CB5572 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69E9FF8D28A9066B00CB5572 /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
+		69E9FF9928AD88AB00CB5572 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +74,9 @@
 		69E9FF8F28AD6D0400CB5572 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				69E9FF7D28A8E90A00CB5572 /* MainViewController.swift */,
+				69E9FF7D28A8E90A00CB5572 /* LoginViewController.swift */,
 				69E9FF8D28A9066B00CB5572 /* GreetingViewController.swift */,
+				69E9FF9928AD88AB00CB5572 /* UserInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -173,8 +176,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69E9FF7E28A8E90A00CB5572 /* MainViewController.swift in Sources */,
+				69E9FF7E28A8E90A00CB5572 /* LoginViewController.swift in Sources */,
 				69E9FF8E28A9066B00CB5572 /* GreetingViewController.swift in Sources */,
+				69E9FF9A28AD88AB00CB5572 /* UserInfoViewController.swift in Sources */,
 				69E9FF7A28A8E90A00CB5572 /* AppDelegate.swift in Sources */,
 				69E9FF7C28A8E90A00CB5572 /* SceneDelegate.swift in Sources */,
 			);
